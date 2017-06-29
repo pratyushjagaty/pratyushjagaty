@@ -5,14 +5,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- The above 3 meta tags *must* come first in the head, any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="images/favicon.ico">
+    <!-- <link rel="icon" href="images/favicon.ico"> -->
 
     <title>Pratyush Gaurav</title>
 
-    <!-- Bootstrap core CSS -->
+    <!-- Bootstrap core  CSS -->
     <link href="CSS/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
@@ -34,9 +34,9 @@
     <div class="container-fluid">
 	<div class="navbar-wrapper" style="position:fixed; margin:0">
         <nav class="navbar navbar-inverse navbar-static-top" >
-          <div class="container">
+          <div class="container" >
             <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <button type="button" class="navbar-toggle collapsed" id="btnCollapse" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -53,11 +53,11 @@
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Follow Me on Social Media <span class="caret"></span></a>
                   <ul class="dropdown-menu">
-                    <li><a href="https://www.facebook.com/pratyush.jagaty"><img src="images/fb.jpg" height="20" width="20" class="social">Facebook</a></li>
+                    <li><a href="https://www.facebook.com/pratyush.jagaty" target="_blank"><img src="images/fb.jpg" height="20" width="20" class="social">Facebook</a></li>
                     <li><a href="https://www.quora.com/profile/Pratyush-Gaurav-Jagaty" target="_blank"><img src="images/quora.png" height="20" width="20" class="social">Quora</li>
                     <li role="separator" class="divider"></li>
                     <li class="dropdown-header">Blog</li>
-                    <li><a href="https://doigetitnow.quora.com/">CP on Quora</a></li>
+                    <li><a href="https://doigetitnow.quora.com/" target="_blank">CP on Quora</a></li>
                   </ul>
                 </li>
               </ul>
@@ -70,7 +70,7 @@
 
 
     <!-- Carousel
-    =================================================== -->
+    ================================================== -->
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
       <ol class="carousel-indicators">
@@ -79,11 +79,9 @@
         <!-- <li data-target="#myCarousel" data-slide-to="2"></li> -->
       </ol>
       <div class="carousel-inner" role="listbox">
-        <div class="item active">
-          <img class="first-slide" src="images/banner.png" alt="First slide">
+        <div class="item active bannerBg bannerBg_1">
           <div class="container">
             <div class="carousel-caption">
-              <!--<h1>Hey!<br/>It's Pratyush here.</h1>-->
             </div>
           </div>
         </div>
@@ -109,7 +107,7 @@
 
       <!-- Three columns of text below the carousel -->
       <div class="row">
-	  <h2 style="padding-top:30px">Competitive Programming</h2>
+	  <h2 style="padding-top:30px; margin-left: 30px">Competitive Programming</h2>
         <p class="lead" style="padding:30px">Computer science education cannot make anyone an expert programmer any more than studying brushes and pigment can make somebody an expert. Competitive coding is what makes me achieve better. More than that, taking up the challenge of solving a code even after failing a multiple  times is what I believe in.</p>
         <div class="col-lg-4">
           <!-- <img class="img-circle" src="images/hackerrank.jpg"  width="150" height="140"> -->
@@ -269,7 +267,7 @@
 			 </div> 
 		 </div> 
 	</section>
-	<a class="block-btn" href="assets/resume.pdf" target="_blank"> <span class="text">Consider hiring me? View my full resume</span> <img class="icon" src="images/download.png" alt="download resume"> </a>
+	<a class="block-btn" href="assets/resume.pdf" target="_blank"> <span class="text">Considering me for a position? View my full resume</span> <img class="icon" src="images/download.png" alt="download resume"> </a>
 	
 
       <div class="featurette" id="contact" style="border-top:1px solid #fff;">
@@ -337,6 +335,10 @@
 				$("html, body").animate({ scrollTop: 0 }, 600);
 				return false;
 			});
+			$(".a").click(function () {
+	            if ($("#btnCollapse").css('display')!='none')
+	            $("#btnCollapse").click();
+        });
 		});
 	
 	</script>
