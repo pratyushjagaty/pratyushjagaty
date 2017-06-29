@@ -190,7 +190,7 @@ html{
     color: #1F4788;
     font-size: 20px;
     margin: 20px;
-	transition: all 0.5s linear 0s;
+    transition: all 0.5s linear 0s;
 }
 
 
@@ -210,8 +210,14 @@ html{
 	text-align:right;
 	font-size:12px;
 }
-
-
+/*Banner CSS*/
+.bannerBg_1{
+	background: url("../images/banner.png") no-repeat;
+}
+.bannerBg{
+	background-size: cover;
+	background-position: center center;
+}
 #skills-section{
 	background:#1b1b1b;
 	padding:30px 0;
