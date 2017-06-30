@@ -22,6 +22,7 @@ html{
   z-index: 20;
 }
 
+
 /* Flip around the padding for proper display in narrow viewports */
 .navbar-wrapper > .container {
   padding-right: 0;
@@ -181,7 +182,7 @@ html{
 }
 
 .navbar-inverse{
-	background: rgba(34, 34, 34, 0.85);
+	background: rgba(34, 34, 34);
 }
 
 .btn-default{
@@ -219,10 +220,21 @@ html{
 	background-position: center center;
 }
 #skills-section{
-	background:#1b1b1b;
-	padding:30px 0;
-	height: 100%;
-	min-height:600px;
+	/* background:#1b1b1b; */
+	background: url(../images/skill-banner.jpg) no-repeat;
+    padding: 30px 0;
+    height: 100%;
+    min-height: 600px;
+    background-size: cover;
+    background-position: center center;
+}
+.maskLayer {
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
 }
 #skills-section .skills-flex-wrapper .skills-heading {
     font-family: Gotham,Helvetica,Arial,sans-serif;
@@ -628,7 +640,34 @@ html{
 		padding: 100px 50px;
 	}
 }
+@media only screen and (max-width: 768px){
+	.navbar-wrapper {
+		position: static!important;
+		margin-left: -15px!important;
+		margin-right: -15px!important;
+	}
+	.navbar{
+		margin-bottom:0!important;
+	}
+    #skills-section .skills-flex-wrapper .skills-heading {
+        font-size: 18px;
+    } 
+        #skills-section .skills-flex-wrapper .dev-wrapper .dev-item {
+        width: 100px;
+        height: 100px;
+        line-height: 7;
+        margin: 1%;
+    }  
+        #skills-section .skills-flex-wrapper .flex-item:nth-child(1) {
+        width: 100%;
+        min-height: 50px;
+    }
+        #skills-section .skills-flex-wrapper {
+        display: block;
+        height: auto;
+    }
 
+}
 @media only screen and (max-width: 600px){
 	#experience-section .experience-wrapper {
 		padding: 30px 0;
@@ -663,26 +702,7 @@ html{
 	#experience-section .down-arrow {
 		margin-left: 3.5px;
 	}
-@media only screen and (max-width: 768px){
-        #skills-section .skills-flex-wrapper .skills-heading {
-        font-size: 18px;
-    } 
-        #skills-section .skills-flex-wrapper .dev-wrapper .dev-item {
-        width: 100px;
-        height: 100px;
-        line-height: 7;
-        margin: 1%;
-    }  
-        #skills-section .skills-flex-wrapper .flex-item:nth-child(1) {
-        width: 100%;
-        min-height: 50px;
-    }
-        #skills-section .skills-flex-wrapper {
-        display: block;
-        height: auto;
-    }
 
-}
 .section:nth-of-type(even) {
     background-color: #1b1b1b;
 }
